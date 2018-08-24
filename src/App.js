@@ -4,6 +4,8 @@ import { ApolloProvider } from 'react-apollo';
 import Courses from './Courses';
 import './App.css';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 // server api endpoint
 
 const client = new ApolloClient({
@@ -12,10 +14,13 @@ const client = new ApolloClient({
 
 const App = () => (
   <ApolloProvider client={client}>
-    <div>
-      <h2>
+    <div className="container">
+      <nav className="navbar navbar-dark bg-primary" >
+      <a className="navbar-brand" >React and GraphQl - Sample Application</a>
+      </nav>
+      <div>
         <Courses />
-      </h2>
+      </div>
     </div>
   </ApolloProvider>
 );
